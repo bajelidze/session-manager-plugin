@@ -22,7 +22,6 @@ import (
 	"errors"
 	"fmt"
 	"math"
-	"os"
 	"reflect"
 	"sync"
 	"time"
@@ -778,12 +777,6 @@ func (dataChannel DataChannel) HandleChannelClosedMessage(log log.T, stopHandler
 	}
 
 	log.Infof("Exiting session with sessionId: %s with output: %s", sessionId, channelClosedMessage.Output)
-	if channelClosedMessage.Output == "" {
-		fmt.Fprintf(os.Stdout, "\n\nExiting session with sessionId: %s.\n\n", sessionId)
-	} else {
-		fmt.Fprintf(os.Stdout, "\n\nSessionId: %s : %s\n\n", sessionId, channelClosedMessage.Output)
-	}
-
 	stopHandler()
 }
 
