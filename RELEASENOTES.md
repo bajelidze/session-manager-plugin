@@ -1,5 +1,14 @@
 Latest
 ================
+- Upgrade aws-sdk-go to 1.54.10
+- Reformat comments for gofmt check
+
+1.2.633.0
+================
+- Update dockerfile to use ecr image
+
+1.2.553.0
+================
 - Upgrade aws-sdk-go and dependent Golang packages
 
 1.2.536.0
